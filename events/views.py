@@ -10,10 +10,10 @@ from .models import Event
 # Create your views here.
 
 def Hello_World(requests):
-    # template = loader.get_template('admin/events/change_list.html')
-    # context = {
-    #     'previous_month':previous_month,
-    #     'next_month': next_month,
-    # }
-    # return HttpResponse(template.render(context,requests))
-    return HttpResponse('Hello World')
+    template = loader.get_template('admin/events/change_list.html')
+    context = {
+        'previous_month':previous_month,
+        'next_month': next_month,
+    }
+    return HttpResponse(template.render(context,requests))
+  
